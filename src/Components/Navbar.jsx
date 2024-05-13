@@ -13,6 +13,9 @@ const Navbar = () => {
           <a href="#contact" className="nav_items">Contact</a>
           
         </div>
+        <div className='bar'>
+          <h1>=</h1>
+        </div>
 
       </div>
     </>

@@ -17,6 +17,9 @@ a{
   justify-content: space-between;
   align-items: center;
 }
+.bar{
+  display: none;
+}
 
 .nav_bar .nav_items {
   padding: 16px;
@@ -35,10 +38,30 @@ a{
   justify-content: space-between;
   align-items: center;
 }
-
+@media (max-width:1200px) {
+  .home{
+    /* flex-direction: row !important; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px ;
+  }
+  .skills{
+    margin-top: 236px;
+  }
+  
+}
+@media (max-width:850px) {
+  .nav_bar .right{
+    display: none;
+  }
+  .bar{
+    display: block;
+  }
+}
 .home .left {
   background-color: var(--bg-color);
-  width: 620px;
+  width:50%;
   text-align: center;
   padding: 30px;
   border-radius: 10px;
@@ -46,21 +69,24 @@ a{
   box-shadow: var(--box-shadow);
 }
 
-.home .right .img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: yellow; */
-  /* height: 350px;
-  width: 350px; */
-}
 
+.home .right{
+  height: 50%;
+  width: 50%;
+}
+.home .right .img{
+  height:250px;
+  width: 250px;
+  margin: auto auto;
+  border-radius:50% ;
+  background-color: gray;
+}
 .home .right .img img{
-  height: 290px;
-  width: 290px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
   border: 5px solid yellow;
-  margin-right: 128px;
-  border-radius: 100%;
    /* animation-name: superman;
   animation-duration: 2s;
   animation-iteration-count: infinite;  */
@@ -100,9 +126,10 @@ a{
 /* SKILLS */
 
 .skills{
-  width: 900px;
+  width: 100%;
 
 }
+
 
 .skills .items{
   display: flex;
@@ -128,11 +155,11 @@ a{
   width: 70px;
 }
 
-.projects .row{
+/* .projects .row{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Contact  */
 .contact-icon{
@@ -162,4 +189,14 @@ a{
 .contact-icon .items .icons{
   font-size: 2rem;
   
+}
+.projects{
+  height: 100%;
+  width: 100%;
+}
+.projects .row{
+  padding-left: 9vw;
+}
+.row > div{
+  margin: 20px;
 }
